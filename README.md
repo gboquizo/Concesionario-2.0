@@ -59,7 +59,5 @@ Con respecto al GUI:
 	<li>Quizás deban basarse en el atributo message de las excepciones.</li>
 	<li>El menú ayuda dispondrá de un Ver ayuda y Acerca de...</li>
 </ul>
-
 @author Guillermo Boquizo Sánchez<p>
 @version 1.0
-
