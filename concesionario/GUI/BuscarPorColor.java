@@ -141,7 +141,7 @@ public class BuscarPorColor extends CochesGUI {
 					mostrarCoche();
 					btnIzda.setEnabled(false);
 				} catch (Exception ex) {
-					JOptionPane.showMessageDialog(null, "!No hay coches del color seleccionado!", "Atención",
+					JOptionPane.showMessageDialog(null, "¡No hay coches del color seleccionado!", "Atención",
 							JOptionPane.ERROR_MESSAGE);
 				}
 			}

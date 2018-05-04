@@ -23,7 +23,7 @@ import java.awt.event.ActionEvent;
 /**
  * Clase que gestiona la GUI de altas del concesionario.
  * 
- * @author Guillermo Boquizo Sánchez
+ * @author Guillermo Boquizo Sánchez.
  * @version 1.0
  *
  */
@@ -32,12 +32,10 @@ public class AltasGUI extends CochesGUI {
 	private static final long serialVersionUID = 1L;
 	private final JPanel contentPanel = new JPanel();
 
-
 	/**
 	 * Create the dialog.
 	 */
 	public AltasGUI() {
-
 		setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 		setIconImage(Toolkit.getDefaultToolkit().getImage(AltasGUI.class.getResource("/resources/favicon.png")));
 		setModal(true);
@@ -76,13 +74,13 @@ public class AltasGUI extends CochesGUI {
 					Gestion.concesionario.annadir(textField_Matricula.getText(), getSelectedColor(),
 							(Modelo) comboBox_modelo.getSelectedItem());
 					textField_Matricula.setText("");
+					JOptionPane.showMessageDialog(contentPanel, "Coche añadido correctamente" ,"¡¡ÉXITO!!", JOptionPane.INFORMATION_MESSAGE);
 					Gestion.setModificado(true);
 				} catch (ColorNoValidoException | ModeloNoValidoException | MatriculaNoValidaException | CocheYaExisteException e) {
 					JOptionPane.showMessageDialog(contentPanel, e.getMessage(), "¡¡ERROR!!", JOptionPane.ERROR_MESSAGE);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
-
 			}
 		});
 	}

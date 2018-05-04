@@ -12,9 +12,9 @@ import javax.swing.SwingConstants;
 import java.awt.Color;
 
 /**
- * Clase para la ventana GUI AcercaDe
+ * Clase para la ventana GUI AcercaDe.
  * 
- * @author Guillermo Boquizo Sánchez
+ * @author Guillermo Boquizo Sánchez.
  * @version 1.0
  *
  */

@@ -26,12 +26,10 @@ public class Ayuda extends JDialog {
 	private static final long serialVersionUID = 1L;
 	private final JPanel contentPanel = new JPanel();
 	
-
 	/**
 	 * Create the dialog.
 	 */
 	public Ayuda() {
-		
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Ayuda.class.getResource("/resources/favicon.png")));
 		setResizable(false);
 		setTitle("Ayuda del concesionario");

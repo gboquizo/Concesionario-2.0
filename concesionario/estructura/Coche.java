@@ -169,7 +169,7 @@ public class Coche implements Serializable {
 	}
 	
 	/**
-	 * equals para implementar el contains de coche.
+	 * Equals para implementar el contains de coche.
 	 */
 	@Override
 	public boolean equals(Object obj) {

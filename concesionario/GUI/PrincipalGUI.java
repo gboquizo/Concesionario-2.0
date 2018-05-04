@@ -391,7 +391,6 @@ public class PrincipalGUI extends JFrame implements Serializable {
 			public void windowClosing(WindowEvent arg0) {
 				salir();
 			}
-
 			@Override
 			public void windowClosed(WindowEvent arg0) {
 				if (Gestion.isModificado()) {

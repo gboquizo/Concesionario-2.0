@@ -26,7 +26,7 @@ public class BajasGUI extends CochesGUI {
 
 	private static final long serialVersionUID = 1L;
 	private final JPanel contentPanel = new JPanel();
-	private int indice = 0;
+	private int indice;
 
 	/**
 	 * Create the dialog.
@@ -64,7 +64,6 @@ public class BajasGUI extends CochesGUI {
 	 * @param indice índice pasado como parámetro.
 	 */
 	private void mostrarCoche(int indice) {
-
 		try {
 			Coche coche = Gestion.concesionario.buscarCoche(textField_Matricula.getText());
 			textField_Matricula.setForeground(java.awt.Color.BLACK);
@@ -85,9 +84,10 @@ public class BajasGUI extends CochesGUI {
 			}
 		} catch (MatriculaNoValidaException e) {
 			textField_Matricula.setForeground(java.awt.Color.RED);
+			JOptionPane.showMessageDialog(contentPanel, e.getMessage(), "¡¡ERROR!!", JOptionPane.ERROR_MESSAGE);
 		} catch (CocheNoExisteException e) {
-			JOptionPane.showMessageDialog(null, "¡No existe ningun coche con esa matricula!", "Aceptar",
-					JOptionPane.ERROR_MESSAGE);
+			textField_Matricula.setForeground(java.awt.Color.RED);
+			JOptionPane.showMessageDialog(contentPanel, e.getMessage(), "¡¡ERROR!!", JOptionPane.ERROR_MESSAGE);
 		}
 	};
 

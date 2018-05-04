@@ -69,10 +69,10 @@ public class CochesGUI extends JDialog {
 		contentPanel.setBackground(Color.WHITE);
 		contentPanel.setLayout(null);
 
-		JLabel lblMatrcula = new JLabel("Matrícula");
-		lblMatrcula.setToolTipText("Añade una matrícula");
-		lblMatrcula.setBounds(10, 11, 69, 14);
-		contentPanel.add(lblMatrcula);
+		JLabel lblMatricula = new JLabel("Matrícula");
+		lblMatricula.setToolTipText("Añade una matrícula");
+		lblMatricula.setBounds(10, 11, 69, 14);
+		contentPanel.add(lblMatricula);
 
 		textField_Matricula = new JTextField();
 		textField_Matricula.setBounds(10, 32, 407, 20);
@@ -149,9 +149,8 @@ public class CochesGUI extends JDialog {
 			btnDcha = new JButton(">");
 			btnDcha.setBounds(350, 124, 43, 23);
 			contentPanel.add(btnDcha);
-
 		}
-
+		
 		{
 			JPanel buttonPane = new JPanel();
 			buttonPane.setBackground(Color.WHITE);
@@ -216,6 +215,7 @@ public class CochesGUI extends JDialog {
 			}
 		});
 	}
+	
 	/**
 	 * Método que permite obtener un color de los dados en el enum Color 
 	 * en función de la selección en el radioButton.
