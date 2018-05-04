@@ -44,7 +44,7 @@ Con respecto al GUI:
 	<li>Un diálogo para trabajar con Coches (JDialog).El diálogo contendrá:
 		<ul>
 			<li>Una caja de texto (JTextField) debidamente etiquetada(JLabel) para las matrículas Al perder el foco cambiará el 				color si la matrícula no es válida.Al editar, la matrícula siempre lo hará en negro.</li>
-			<li>Una lista (JList) para el modelo y otra para la marca. Las listas han de estar sincronizadas</li>.
+			<li>Una lista (JList) para el modelo y otra para la marca. Las listas han de estar sincronizadas.</li>
 			<li>Tres radio buttons con los tres colores (tres JRadioButton y un ButtonGroup)</li>
 				<ul>
 					<li>Selecciona los tres, menú contextual > set ButtonGroup</li>
