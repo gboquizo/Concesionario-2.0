@@ -66,11 +66,12 @@ public class MostrarConcesionario extends CochesGUI {
 	}
 	
 	private void mostrarCoche() {
+		comprobarBotones();
 		textField_Matricula.setText(coche.getMatricula());
 		combobox_marca.setSelectedItem(coche.getModelo().getMarca());
 		comboBox_modelo.setSelectedItem(coche.getModelo());
 		seleccionarColor(coche.getColor());
-		comprobarBotones();
+		
 	}
 
 	private void cocheAdelante() {

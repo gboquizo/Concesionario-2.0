@@ -36,6 +36,7 @@ import java.awt.Dimension;
 
 /**
  * Ventana principal de la GUI del concesionario.
+ * 
  * @author Guillermo Boquizo Sánchez
  * @version 1.0
  *
@@ -43,9 +44,15 @@ import java.awt.Dimension;
 public class PrincipalGUI extends JFrame implements Serializable {
 
 	private JPanel contentPane = new FondoPrincipal();
-	private final Filtro filter = new Filtro(".obj", "Objeto");
 	private static final long serialVersionUID = 1L;
-	private JFileChooser jFilechooser = new JFileChooser();
+
+	//para el FileChooser
+	private static final Filtro filter = new Filtro(".obj", "Objeto");
+	private static final JFileChooser jFilechooser = new JFileChooser();
+	static {
+		jFilechooser.addChoosableFileFilter(filter);
+	}
+
 	private Ayuda ayuda = null;
 
 	/**
@@ -161,7 +168,7 @@ public class PrincipalGUI extends JFrame implements Serializable {
 					BajasGUI bajas = new BajasGUI();
 					bajas.setVisible(true);
 				} else {
-					JOptionPane.showMessageDialog(null, "¡Concesionario vacío!", "?", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "¡Concesionario vacío!", "Error", JOptionPane.ERROR_MESSAGE);
 				}
 			}
 		});
@@ -178,7 +185,7 @@ public class PrincipalGUI extends JFrame implements Serializable {
 					CochesGUI mostrar = new MostrarConcesionario();
 					mostrar.setVisible(true);
 				} catch (IndexOutOfBoundsException | NoSuchElementException e) {
-					JOptionPane.showMessageDialog(null, "¡Concesionario vacío!", "?", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "¡Concesionario vacío!", "Error", JOptionPane.ERROR_MESSAGE);
 				}
 			}
 		});
@@ -197,7 +204,7 @@ public class PrincipalGUI extends JFrame implements Serializable {
 					BuscarPorMatricula mostrarMatricula = new BuscarPorMatricula();
 					mostrarMatricula.setVisible(true);
 				} else {
-					JOptionPane.showMessageDialog(null, "¡Concesionario vacío!", "?", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "¡Concesionario vacío!", "Error", JOptionPane.ERROR_MESSAGE);
 				}
 			}
 		});
@@ -211,7 +218,7 @@ public class PrincipalGUI extends JFrame implements Serializable {
 					BuscarPorColor mostrarPorColor = new BuscarPorColor();
 					mostrarPorColor.setVisible(true);
 				} else {
-					JOptionPane.showMessageDialog(null, "¡Concesionario vacío!", "?", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "¡Concesionario vacío!", "Error", JOptionPane.ERROR_MESSAGE);
 				}
 			}
 		});
@@ -289,8 +296,8 @@ public class PrincipalGUI extends JFrame implements Serializable {
 	 * @throws ClassNotFoundException
 	 */
 	private void abrirArchivo() throws HeadlessException, IOException, ClassNotFoundException {
-		jFilechooser.setAcceptAllFileFilterUsed(false);
-		jFilechooser.addChoosableFileFilter(filter);
+		// jFilechooser.setAcceptAllFileFilterUsed(false);
+		// jFilechooser.addChoosableFileFilter(filter);
 		if (jFilechooser.showDialog(jFilechooser, "Abrir Archivo") == JFileChooser.APPROVE_OPTION) {
 			Fichero.leer(jFilechooser.getSelectedFile());
 			setTitle(jFilechooser.getSelectedFile().getName());
@@ -328,25 +335,25 @@ public class PrincipalGUI extends JFrame implements Serializable {
 	/**
 	 * Método que guarda un archivo
 	 */
-		private void guardar() {
-			if (getTitle().equalsIgnoreCase("Sin titulo")) {
-				guardarComo();
-			} else {
-				try {
-					Fichero.escribir(Gestion.concesionario, jFilechooser.getSelectedFile());
-					Gestion.setModificado(false);
-					setTitle(jFilechooser.getSelectedFile().getName());
-				} catch (IOException e) {
-				}
+	private void guardar() {
+		if (getTitle().equalsIgnoreCase("Sin titulo")) {
+			guardarComo();
+		} else {
+			try {
+				Fichero.escribir(Gestion.concesionario, jFilechooser.getSelectedFile());
+				Gestion.setModificado(false);
+				setTitle(jFilechooser.getSelectedFile().getName());
+			} catch (IOException e) {
 			}
 		}
+	}
 
 	/**
 	 * Método que guarda un archivo y comprueba si existe.
 	 */
 	private void guardarComo() {
-		jFilechooser.setAcceptAllFileFilterUsed(false);
-		jFilechooser.addChoosableFileFilter(filter);
+		// jFilechooser.setAcceptAllFileFilterUsed(false);
+		// jFilechooser.addChoosableFileFilter(filter);
 
 		if (JFileChooser.APPROVE_OPTION == jFilechooser.showDialog(jFilechooser, "Guardar")) {
 			jFilechooser.setAcceptAllFileFilterUsed(false);
@@ -382,8 +389,8 @@ public class PrincipalGUI extends JFrame implements Serializable {
 	}
 
 	/**
-	 * Controla los cierres ordinarios de la ventana del programa (alt + F4, cierre en la cruz), 
-	 * comprobando cambios previamente con un JOptionPane
+	 * Controla los cierres ordinarios de la ventana del programa (alt + F4, cierre
+	 * en la cruz), comprobando cambios previamente con un JOptionPane
 	 */
 	private void cerrar() {
 		addWindowListener(new WindowAdapter() {
@@ -391,6 +398,7 @@ public class PrincipalGUI extends JFrame implements Serializable {
 			public void windowClosing(WindowEvent arg0) {
 				salir();
 			}
+
 			@Override
 			public void windowClosed(WindowEvent arg0) {
 				if (Gestion.isModificado()) {
