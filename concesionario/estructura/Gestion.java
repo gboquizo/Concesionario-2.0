@@ -11,7 +11,16 @@ public class Gestion implements Serializable {
 	 * Campo para el arrayList de Coche.
 	 */
 	public static Concesionario concesionario = new Concesionario();
-
+	static{
+		try {
+			concesionario.annadir("7777PPP", Color.AZUL, Modelo.CORDOBA);
+			concesionario.annadir("8888TTT", Color.PLATA, Modelo.IBIZA);
+			concesionario.annadir("9999RRR", Color.ROJO, Modelo.SERIE1);
+			concesionario.annadir("5555ZZZ", Color.AZUL, Modelo.SERIE3);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 	/**
 	 * Fichero
 	 */

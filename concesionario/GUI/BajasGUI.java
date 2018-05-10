@@ -79,7 +79,7 @@ public class BajasGUI extends CochesGUI {
 			if (respuesta == 0 && Gestion.concesionario.eliminar(textField_Matricula.getText())) {
 				JOptionPane.showMessageDialog(contentPanel, "Coche eliminado correctamente", "INFORMACIÓN",
 						JOptionPane.INFORMATION_MESSAGE);
-				textField_Matricula.setText("");
+				limpiar();
 				Gestion.setModificado(true);
 			}
 		} catch (MatriculaNoValidaException e) {
@@ -104,13 +104,11 @@ public class BajasGUI extends CochesGUI {
 	 * Método que permite modificar el estado de visibilidad/actividad de los botones.
 	 */
 	private void actualizarBotones() {
-		
 		comboBox_modelo.setEnabled(false);
 		combobox_marca.setEnabled(false);
 		rdbtnBlue.setEnabled(false);
 		rdbtnRed.setEnabled(false);
 		rdbtnSilver.setEnabled(false);
-		
 		btnOK.setVisible(false);
 		btnIzda.setVisible(false);
 		btnDcha.setVisible(false);

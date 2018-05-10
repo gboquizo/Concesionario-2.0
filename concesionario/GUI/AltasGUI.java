@@ -73,8 +73,7 @@ public class AltasGUI extends CochesGUI {
 				try {
 					Gestion.concesionario.annadir(textField_Matricula.getText(), getSelectedColor(),
 							(Modelo) comboBox_modelo.getSelectedItem());
-					textField_Matricula.setText("");
-					JOptionPane.showMessageDialog(contentPanel, "Coche añadido correctamente" ,"¡¡ÉXITO!!", JOptionPane.INFORMATION_MESSAGE);
+					limpiar();
 					Gestion.setModificado(true);
 				} catch (ColorNoValidoException | ModeloNoValidoException | MatriculaNoValidaException | CocheYaExisteException e) {
 					JOptionPane.showMessageDialog(contentPanel, e.getMessage(), "¡¡ERROR!!", JOptionPane.ERROR_MESSAGE);

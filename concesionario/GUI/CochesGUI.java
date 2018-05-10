@@ -252,4 +252,11 @@ public class CochesGUI extends JDialog {
 			break;
 		}
 	}
+	
+	void limpiar() {
+		textField_Matricula.setText("");
+		combobox_marca.setSelectedItem(null);
+		comboBox_modelo.setSelectedItem(null);
+		buttonGroup.clearSelection();
+	}
 }
