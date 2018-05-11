@@ -117,6 +117,25 @@ public class Coche implements Serializable {
 	}
 	
 	/**
+	 * Comprueba, mediante el patrón, si la matrícula es válida o no.
+	 * @param matricula la matrícula a comprobar.
+	 * @return true o false, en función de si cumple o no con el patrón.
+	 */
+	static boolean esValida(String matricula) {
+		return patronMatricula.matcher(matricula).matches();
+	}
+	
+	/**
+	 * Permite estandarizar la matrícula eliminando guiones y espacios.
+	 * @param matricula la matrícula a estandarizar.
+	 * @return la matrícula estandarizada.
+	 */
+	private String estandarizarMatricula(String matricula) {
+		assert esValida(matricula);
+		return matricula.replaceAll("[ -]", "");
+	}
+	
+	/**
 	 * Establece el modelo. Lanza una excepción si el modelo es inválido.
 	 * @param modelo el modelo a establecer.
 	 * @throws ModeloNoValidoException si el modelo es inválido.
@@ -138,24 +157,6 @@ public class Coche implements Serializable {
 		this.color = color;
 	}
 	
-	/**
-	 * Comprueba, mediante el patrón, si la matrícula es válida o no.
-	 * @param matricula la matrícula a comprobar.
-	 * @return true o false, en función de si cumple o no con el patrón.
-	 */
-	static boolean esValida(String matricula) {
-		return patronMatricula.matcher(matricula).matches();
-	}
-	
-	/**
-	 * Permite estandarizar la matrícula eliminando guiones y espacios.
-	 * @param matricula la matrícula a estandarizar.
-	 * @return la matrícula estandarizada.
-	 */
-	private String estandarizarMatricula(String matricula) {
-		assert esValida(matricula);
-		return matricula.replaceAll("[ -]", "");
-	}
 	
 	/**
 	 * hashCode para implementar el contains de coche.
