@@ -11,7 +11,6 @@ import javax.swing.border.EmptyBorder;
 import concesionario.estructura.Coche;
 import concesionario.estructura.Gestion;
 
-
 /**
  * Clase que gestiona la GUI que muestra el concesionario.
  * 
@@ -22,10 +21,11 @@ import concesionario.estructura.Gestion;
 public class MostrarConcesionario extends CochesGUI {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	private final JPanel contentPanel = new JPanel();
 	private ListIterator<Coche> iterador;
 	private Coche coche;
+	private int controlMovimiento;
 
 	/**
 	 * Create the dialog.
@@ -64,42 +64,47 @@ public class MostrarConcesionario extends CochesGUI {
 		mostrarCoche();
 		btnIzda.setEnabled(false);
 	}
-	
+
 	private void mostrarCoche() {
 		comprobarBotones();
 		textField_Matricula.setText(coche.getMatricula());
 		combobox_marca.setSelectedItem(coche.getModelo().getMarca());
 		comboBox_modelo.setSelectedItem(coche.getModelo());
 		seleccionarColor(coche.getColor());
-		
 	}
 
 	private void cocheAdelante() {
-		if (iterador.hasNext()) {
+		if (iterador.hasNext())
 			coche = iterador.next();
-		}
 		mostrarCoche();
+		if (controlMovimiento == 1)
+			if (iterador.hasNext())
+				coche = iterador.next();
+		mostrarCoche();
+		controlMovimiento = 0;
+		comprobarBotones();
 	}
 
 	private void cocheAtras() {
-		if (iterador.hasPrevious()) {
+		if (iterador.hasPrevious())
 			coche = iterador.previous();
-		}
 		mostrarCoche();
+		if (controlMovimiento == 0)
+			if (iterador.hasPrevious())
+				coche = iterador.previous();
+		mostrarCoche();
+		controlMovimiento = 1;
+		comprobarBotones();
 	}
 
 	private void comprobarBotones() {
-		if (!iterador.hasNext()) {
-			btnDcha.setEnabled(false);
-			coche = iterador.previous();
-		} else {
-			btnDcha.setEnabled(true);
-		}
+		btnIzda.setEnabled(true);
+		btnDcha.setEnabled(true);
 		if (!iterador.hasPrevious()) {
 			btnIzda.setEnabled(false);
-			coche = iterador.next();
-		} else {
-			btnIzda.setEnabled(true);
+		}
+		if (!iterador.hasNext()) {
+			btnDcha.setEnabled(false);
 		}
 	}
 }
