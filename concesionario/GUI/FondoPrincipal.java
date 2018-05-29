@@ -7,8 +7,9 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
 /**
- * Permite generar el fondo principal.
- * @author Guillermo Boquizo Sánchez
+ * 
+ * Permite generar el fondo principal para la aplicaci\u00f3n.
+ * @author Guillermo Boquizo S\u00e1nchez
  * @version 1.0
  *
  */
@@ -20,7 +21,7 @@ public class FondoPrincipal extends JPanel {
 	 * Create the panel.
 	 */
 	public FondoPrincipal() {
-		this.setSize(400, 280);
+		this.setSize(800, 560);
 	}
 
 	@Override

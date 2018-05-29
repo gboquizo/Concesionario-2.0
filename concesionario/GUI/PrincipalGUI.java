@@ -37,7 +37,7 @@ import java.awt.Dimension;
 /**
  * Ventana principal de la GUI del concesionario.
  * 
- * @author Guillermo Boquizo Sánchez
+ * @author Guillermo Boquizo S\u00e1nchez
  * @version 1.0
  *
  */
@@ -168,7 +168,7 @@ public class PrincipalGUI extends JFrame implements Serializable {
 					BajasGUI bajas = new BajasGUI();
 					bajas.setVisible(true);
 				} else {
-					JOptionPane.showMessageDialog(null, "¡Concesionario vacío!", "Error", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "\u00a1Concesionario vac\u00edo!", "Error", JOptionPane.ERROR_MESSAGE);
 				}
 			}
 		});
@@ -185,7 +185,7 @@ public class PrincipalGUI extends JFrame implements Serializable {
 					CochesGUI mostrar = new MostrarConcesionario();
 					mostrar.setVisible(true);
 				} catch (IndexOutOfBoundsException | NoSuchElementException e) {
-					JOptionPane.showMessageDialog(null, "¡Concesionario vacío!", "Error", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "\u00a1Concesionario vac\u00edo!", "Error", JOptionPane.ERROR_MESSAGE);
 				}
 			}
 		});
@@ -196,7 +196,7 @@ public class PrincipalGUI extends JFrame implements Serializable {
 		mnBuscar.setMnemonic('b');
 		menuBar.add(mnBuscar);
 
-		JMenuItem mntmPorMatricula = new JMenuItem("Por matrícula");
+		JMenuItem mntmPorMatricula = new JMenuItem("Por matr\u00edcula");
 		mntmPorMatricula.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_F, InputEvent.CTRL_MASK));
 		mntmPorMatricula.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -204,7 +204,7 @@ public class PrincipalGUI extends JFrame implements Serializable {
 					BuscarPorMatricula mostrarMatricula = new BuscarPorMatricula();
 					mostrarMatricula.setVisible(true);
 				} else {
-					JOptionPane.showMessageDialog(null, "¡Concesionario vacío!", "Error", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "\u00a1Concesionario vac\u00edo!", "Error", JOptionPane.ERROR_MESSAGE);
 				}
 			}
 		});
@@ -218,7 +218,7 @@ public class PrincipalGUI extends JFrame implements Serializable {
 					BuscarPorColor mostrarPorColor = new BuscarPorColor();
 					mostrarPorColor.setVisible(true);
 				} else {
-					JOptionPane.showMessageDialog(null, "¡Concesionario vacío!", "Error", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "\u00a1Concesionario vac\u00edo!", "Error", JOptionPane.ERROR_MESSAGE);
 				}
 			}
 		});
@@ -263,12 +263,12 @@ public class PrincipalGUI extends JFrame implements Serializable {
 	}
 
 	/**
-	 * Método qe permite crear un nuevo concesionario, por defecto sin
-	 * modificaciones y sin título.
+	 * M\u00e9todo qe permite crear un nuevo concesionario, por defecto sin
+	 * modificaciones y sin t\u00edtulo.
 	 */
 	private void nuevo() {
 		if (Gestion.isModificado()) {
-			int respuesta = JOptionPane.showConfirmDialog(jFilechooser, "No ha guardado, ¿Desea guardar?", "Atención",
+			int respuesta = JOptionPane.showConfirmDialog(jFilechooser, "No ha guardado, \u00bfDesea guardar?", "Atenci\u00f3n",
 					JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE);
 			if (respuesta == JOptionPane.YES_OPTION) {
 				guardarComo();
@@ -289,16 +289,14 @@ public class PrincipalGUI extends JFrame implements Serializable {
 	}
 
 	/**
-	 * Método que abre un archivo a partir del filechooser.
+	 * M\u00e9todo que abre un archivo a partir del filechooser.
 	 * 
 	 * @throws HeadlessException
 	 * @throws IOException
 	 * @throws ClassNotFoundException
 	 */
 	private void abrirArchivo() throws HeadlessException, IOException, ClassNotFoundException {
-		// jFilechooser.setAcceptAllFileFilterUsed(false);
-		// jFilechooser.addChoosableFileFilter(filter);
-		if (jFilechooser.showDialog(jFilechooser, "Abrir Archivo") == JFileChooser.APPROVE_OPTION) {
+		if (jFilechooser.showDialog(jFilechooser, "Abrir archivo") == JFileChooser.APPROVE_OPTION) {
 			Fichero.leer(jFilechooser.getSelectedFile());
 			setTitle(jFilechooser.getSelectedFile().getName());
 			Gestion.setModificado(false);
@@ -306,11 +304,11 @@ public class PrincipalGUI extends JFrame implements Serializable {
 	}
 
 	/**
-	 * Método que abre un nuevo concesionario y comprueba si está modificado.
+	 * M\u00e9todo que abre un nuevo concesionario y comprueba si est\u00e1 modificado.
 	 */
 	private void abrir() {
 		if (Gestion.isModificado()) {
-			int respuesta = JOptionPane.showConfirmDialog(jFilechooser, "No ha guardado, ¿Desea guardar?", "Atención",
+			int respuesta = JOptionPane.showConfirmDialog(jFilechooser, "No ha guardado, \u00bfDesea guardar?", "Atenci\u00f3n",
 					JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE);
 			if (respuesta == JOptionPane.YES_OPTION) {
 				guardarComo();
@@ -333,7 +331,7 @@ public class PrincipalGUI extends JFrame implements Serializable {
 	}
 
 	/**
-	 * Método que guarda un archivo
+	 * M\u00e9todo que guarda un archivo
 	 */
 	private void guardar() {
 		if (getTitle().equalsIgnoreCase("Sin titulo")) {
@@ -349,17 +347,14 @@ public class PrincipalGUI extends JFrame implements Serializable {
 	}
 
 	/**
-	 * Método que guarda un archivo y comprueba si existe.
+	 * M\u00e9todo que guarda un archivo y comprueba si existe.
 	 */
 	private void guardarComo() {
-		// jFilechooser.setAcceptAllFileFilterUsed(false);
-		// jFilechooser.addChoosableFileFilter(filter);
-
 		if (JFileChooser.APPROVE_OPTION == jFilechooser.showDialog(jFilechooser, "Guardar")) {
 			jFilechooser.setAcceptAllFileFilterUsed(false);
 			if (jFilechooser.getSelectedFile().exists()) {
 				int respuesta = JOptionPane.showConfirmDialog(jFilechooser,
-						"El archivo ya existe, ¿Desea sobreescribirlo?", "Atención", JOptionPane.YES_NO_CANCEL_OPTION,
+						"El archivo ya existe, \u00bfDesea sobreescribirlo?", "Atenci\u00f3n", JOptionPane.YES_NO_CANCEL_OPTION,
 						JOptionPane.WARNING_MESSAGE);
 				if (respuesta == JOptionPane.YES_OPTION) {
 					try {
@@ -372,7 +367,7 @@ public class PrincipalGUI extends JFrame implements Serializable {
 						e.printStackTrace();
 					}
 				} else {
-					JOptionPane.showMessageDialog(null, "El archivo no se ha guardado", "Error!",
+					JOptionPane.showMessageDialog(null, "El archivo no se ha guardado", "\\u00a1Error!",
 							JOptionPane.ERROR_MESSAGE);
 				}
 			} else {
@@ -381,7 +376,7 @@ public class PrincipalGUI extends JFrame implements Serializable {
 					Gestion.setModificado(false);
 					setTitle(jFilechooser.getSelectedFile().getName());
 				} catch (IOException e) {
-					JOptionPane.showMessageDialog(null, "El archivo no se ha guardado", "Error!",
+					JOptionPane.showMessageDialog(null, "El archivo no se ha guardado", "\u00a1Error!",
 							JOptionPane.ERROR_MESSAGE);
 				}
 			}
@@ -413,7 +408,7 @@ public class PrincipalGUI extends JFrame implements Serializable {
 	 */
 	protected void salir() {
 		if (Gestion.isModificado()) {
-			int respuesta = JOptionPane.showConfirmDialog(jFilechooser, "No ha guardado, ¿Desea guardar?", "Atención",
+			int respuesta = JOptionPane.showConfirmDialog(jFilechooser, "No ha guardado, \u00bfDesea guardar?", "Atenci\u00f3n",
 					JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE);
 			if (respuesta == JOptionPane.YES_OPTION) {
 				guardarComo();

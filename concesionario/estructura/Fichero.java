@@ -12,9 +12,9 @@ import java.io.Serializable;
 import concesionario.estructura.Concesionario;
 
 /**
- * Clase que contiene métodos necesarios para operar con ficheros.
+ * Clase que contiene m\u00e9todos necesarios para operar con ficheros.
  * 
- * @author Guillermo Boquizo Sánchez
+ * @author Guillermo Boquizo S\u00e1nchez
  * @version 1.0
  *
  */
@@ -30,7 +30,7 @@ public class Fichero implements Serializable {
 	 * @param archivo el archivo a leer
 	 * @throws IOException
 	 * @throws ClassNotFoundException
-	 * @return Gestion.concesionario el concesionario leído.
+	 * @return Gestion.concesionario el concesionario le\u00eddo.
 	 */
 	public static Concesionario leer(File archivo) throws IOException, ClassNotFoundException {
 		try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(archivo))) {
@@ -41,12 +41,12 @@ public class Fichero implements Serializable {
 
 	/**
 	 * 
-	 * Método que guarda un objeto pidiendo el nombre de archivo a crear.
+	 * M\u00e9todo que guarda un objeto pidiendo el nombre de archivo a crear.
 	 * 
 	 * @param objeto objeto a guardar.
 	 * 
 	 * @param nombre del fichero.
-	 * @throws IOException Excepción lanzada al finalizar el flujo
+	 * @throws IOException Excepci\u00f3n lanzada al finalizar el flujo
 	 */
 	public static void escribir(Object objeto, File nombre) throws IOException {
 		nombre = comprobarExtension(nombre);
@@ -67,10 +67,10 @@ public class Fichero implements Serializable {
 	}
 
 	/**
-	 * Comprueba si la extensión del fichero es válida o no.
+	 * Comprueba si la extensi\u00f3n del fichero es v\u00e1lida o no.
 	 * 
 	 * @param file Representa el fichero a comprobar.
-	 * @return file Fichero con la extensión válida.
+	 * @return file Fichero con la extensi\u00f3n v\u00e1lida.
 	 */
 	static File comprobarExtension(File file) {
 		String path = file.getPath();

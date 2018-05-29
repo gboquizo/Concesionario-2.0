@@ -8,7 +8,7 @@ import java.util.ListIterator;
 
 /**
  * Envoltorio de arrayList de coches.
- * @author Guillermo Boquizo Sánchez
+ * @author Guillermo Boquizo S\u00e1nchez
  * @version 1.0
  *
  */
@@ -16,14 +16,14 @@ public class Concesionario implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	private ArrayList<Coche> concesionario = new ArrayList<Coche>();
-	private final String NOMBRE = "I.E.S Gran Capitán";
+	private final String NOMBRE = "I.E.S Gran Capit\u00e1n";
 	
 	/**
-	 * Añade un coche al concesionario.Si el concesionario ya contiene el coche, lanza una excepción.
-	 * @param matricula la matrícula del coche a añadir.
-	 * @param color el color del coche a añadir.
-	 * @param modelo el modelo del coche a añadir.
-	 * @throws Exception cualquier Exception checked que se lance al añadir.
+	 * A\u00f1ade un coche al concesionario.Si el concesionario ya contiene el coche, lanza una excepci\u00f3n.
+	 * @param matricula la matr\u00edcula del coche a a\u00f1adir.
+	 * @param color el color del coche a a\u00f1adir.
+	 * @param modelo el modelo del coche a a\u00f1adir.
+	 * @throws Exception cualquier Exception checked que se lance al a\u00f1adir.
 	 */
 	public void annadir(String matricula, Color color, Modelo modelo) throws Exception {
 		Coche coche = new Coche(matricula, color, modelo);
@@ -33,36 +33,36 @@ public class Concesionario implements Serializable {
 	}
 	
 	/**
-	 * Elimina un coche del concesionario. Si la matrícula no es válida, lanza una excepción.
-	 * @param matricula la matrícula del coche a eliminar.
+	 * Elimina un coche del concesionario. Si la matr\u00edcula no es v\u00e1lida, lanza una excepci\u00f3n.
+	 * @param matricula la matr\u00edcula del coche a eliminar.
 	 * @return el coche a borrar.
-	 * @throws MatriculaNoValidaException si la matrícula es inválida.
+	 * @throws MatriculaNoValidaException si la matr\u00edcula es inv\u00e1lida.
 	 */
 	public boolean eliminar(String matricula) throws MatriculaNoValidaException {
 		return concesionario.remove(new Coche(matricula));
 	}
 	
 	/**
-	 * Devuelve el tamaño del concesionario.
-	 * @return tamaño del concesionario. 
+	 * Devuelve el tama\u00f1o del concesionario.
+	 * @return tama\u00f1o del concesionario. 
 	 */
 	public int tamanno() {
 		return concesionario.size();
 	}
 	
 	/**
-	 * Comprueba si el concesionario está o no vacío.
-	 * @return true o false, en función del estado del concesionario.
+	 * Comprueba si el concesionario est\u00e1 o no vac\u00edo.
+	 * @return true o false, en funci\u00f3n del estado del concesionario.
 	 */
 	public boolean vacio() {
 		return concesionario.isEmpty();
 	}
 	
 	/**
-	 * Busca un coche por matrícula.
-	 * @param matricula la matrícula por la que se busca el coche.
-	 * @return el coche encontrado por esa matrícula.
-	 * @throws MatriculaNoValidaException si la matrícula es inválida.
+	 * Busca un coche por matr\u00edcula.
+	 * @param matricula la matr\u00edcula por la que se busca el coche.
+	 * @return el coche encontrado por esa matr\u00edcula.
+	 * @throws MatriculaNoValidaException si la matr\u00edcula es inv\u00e1lida.
 	 * @throws CocheNoExisteException si el coche no se encuentra en el concesionario.
 	 */
 	public Coche buscarCoche(String matricula) throws MatriculaNoValidaException, CocheNoExisteException {
@@ -103,17 +103,17 @@ public class Concesionario implements Serializable {
 	}
 
 	/**
-	 * Comprueba que la matrícula sea válida.
+	 * Comprueba que la matr\u00edcula sea v\u00e1lida.
 	 * 
-	 * @param matricula la matrícula a comprobar
-	 * @return true si es válida, false en caso contrario.
+	 * @param matricula la matr\u00edcula a comprobar
+	 * @return true si es v\u00e1lida, false en caso contrario.
 	 */
 	public boolean comprobarMatricula(String matricula) {
 		return Coche.esValida(matricula);
 	}
 
 	/**
-	 * Permite iterar hacia atrás y adelante un concesionario.
+	 * Permite iterar hacia atr\u00e1s y adelante un concesionario.
 	 * @return el concesionario iterable.
 	 */
 	public ListIterator<Coche> listIterator() {

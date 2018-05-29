@@ -18,7 +18,7 @@ import java.awt.event.ActionEvent;
 /**
  * Clase que gestiona la GUI de bajas del concesionario.
  * 
- * @author Guillermo Boquizo Sánchez.
+ * @author Guillermo Boquizo S\u00e1nchez.
  * @version 1.0.
  *
  */
@@ -38,7 +38,7 @@ public class BajasGUI extends CochesGUI {
 	}
 
 	/**
-	 * Método que permite modificar el comportamiento de la ventana.
+	 * M\u00e9todo que permite modificar el comportamiento de la ventana.
 	 */
 	private void modificarComportamientos() {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(BajasGUI.class.getResource("/resources/favicon.png")));
@@ -59,9 +59,9 @@ public class BajasGUI extends CochesGUI {
 	}
 
 	/**
-	 * Método que muestra el coche dado su índice.
+	 * M\u00e9todo que muestra el coche dado su \u00edndice.
 	 * 
-	 * @param indice índice pasado como parámetro.
+	 * @param indice \u00edndice pasado como par\u00e1metro.
 	 */
 	private void mostrarCoche(int indice) {
 		try {
@@ -73,26 +73,26 @@ public class BajasGUI extends CochesGUI {
 			seleccionarColor(coche.getColor());
 
 			Object[] opciones = { "Eliminar", "Cancelar" };
-			int respuesta = JOptionPane.showOptionDialog(null, "Se eliminará el coche, ¿Esta seguro?",
-					"¿Está seguro de que desea eliminar?", JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE,
+			int respuesta = JOptionPane.showOptionDialog(null, "Se eliminar\u00e1 el coche, \u00bfEsta seguro?",
+					"\u00bfEst\u00e1 seguro de que desea eliminar?", JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE,
 					null, opciones, opciones[0]);
 			if (respuesta == 0 && Gestion.concesionario.eliminar(textField_Matricula.getText())) {
-				JOptionPane.showMessageDialog(contentPanel, "Coche eliminado correctamente", "INFORMACIÓN",
+				JOptionPane.showMessageDialog(contentPanel, "Coche eliminado correctamente", "INFORMACI\u00d3N",
 						JOptionPane.INFORMATION_MESSAGE);
 				limpiar();
 				Gestion.setModificado(true);
 			}
 		} catch (MatriculaNoValidaException e) {
 			textField_Matricula.setForeground(java.awt.Color.RED);
-			JOptionPane.showMessageDialog(contentPanel, e.getMessage(), "¡¡ERROR!!", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(contentPanel, e.getMessage(), "\u00a1\u00a1ERROR!!", JOptionPane.ERROR_MESSAGE);
 		} catch (CocheNoExisteException e) {
 			textField_Matricula.setForeground(java.awt.Color.RED);
-			JOptionPane.showMessageDialog(contentPanel, e.getMessage(), "¡¡ERROR!!", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(contentPanel, e.getMessage(), "\u00a1\u00a1ERROR!!", JOptionPane.ERROR_MESSAGE);
 		}
 	};
 
 	/**
-	 * Método que permite modificar los textos de la ventana.
+	 * M\u00e9todo que permite modificar los textos de la ventana.
 	 */
 	private void modificarTextos() {
 		setTitle("Bajas de coches\r\n");
@@ -101,7 +101,7 @@ public class BajasGUI extends CochesGUI {
 	}
 
 	/**
-	 * Método que permite modificar el estado de visibilidad/actividad de los botones.
+	 * M\u00e9todo que permite modificar el estado de visibilidad/actividad de los botones.
 	 */
 	private void actualizarBotones() {
 		comboBox_modelo.setEnabled(false);

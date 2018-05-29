@@ -5,7 +5,7 @@ import concesionario.estructura.Color;
 /**
  * 
  *<p>Representa los colores.</p> 
- *Según el enunciado del examen:
+ *Seg\u00fan el enunciado del examen:
  *Se limitarán los colores de coches a tres:
  *
  *	<ul>  
@@ -26,8 +26,8 @@ public enum Color {
 	ROJO, AZUL, PLATA;
 	
 	/**
-	 * Método que genera las opciones de un menú de colores.
-	 * @return opcionesMenu las opciones del menú de colores.
+	 * M\u00e9todo que genera las opciones de un men\u00fa de colores.
+	 * @return opcionesMenu las opciones del men\u00fa de colores.
 	 */
 	public static String[] generarOpcionesMenu() {
 		String[] opcionesMenu = new String[Color.values().length];

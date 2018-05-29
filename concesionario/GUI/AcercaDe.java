@@ -14,7 +14,7 @@ import java.awt.Color;
 /**
  * Clase para la ventana GUI AcercaDe.
  * 
- * @author Guillermo Boquizo Sánchez.
+ * @author Guillermo Boquizo S\u00e1nchez.
  * @version 1.0
  *
  */
@@ -40,7 +40,7 @@ public class AcercaDe extends JDialog {
 		contentPanel.setLayout(null);
 
 		JLabel lblAcercaDe = new JLabel(
-				"<html>\r\n<h1>I.E.S Gran Capitán, 2018</h1>\t\r\n\r\n<h2>Concesionario de coches.</h2>\r\n<ul>\r\n\t<li>Desarrollado por:</li>\r\n\t\t\r\n\t\t\t<p>Guillermo Boquizo Sánchez</p>\r\n\r\n\t\t\t<p>Versión: 1.0</p>\r\n\t\r\n\t\t\t<p>Abril - Mayo 2018</p>\r\n</ul>\r\n</html>");
+				"<html>\r\n<h1>I.E.S Gran Capit\u00e1n, 2018</h1>\t\r\n\r\n<h2>Concesionario de coches.</h2>\r\n<ul>\r\n\t<li>Desarrollado por:</li>\r\n\t\t\r\n\t\t\t<p>Guillermo Boquizo S\u00e1nchez</p>\r\n\r\n\t\t\t<p>Versi\u00f3n: 1.0</p>\r\n\t\r\n\t\t\t<p>Abril - Mayo 2018</p>\r\n</ul>\r\n</html>");
 		lblAcercaDe.setForeground(new Color(0, 0, 0));
 		lblAcercaDe.setBounds(10, 11, 424, 185);
 		getContentPane().add(lblAcercaDe);

@@ -9,26 +9,26 @@ import concesionario.estructura.Modelo;
 /**
  *
  * <p>Representa a un coche.</p>
- * Un coche tendrá las siguientes características:
+ * Un coche tendr\u00e1 las siguientes caracter\u00edsticas:
  * <ol>
- * 		<li>Color. Se limitarán los colores a tres: plata, rojo y azul.</li>
- * 		<li>Modelo. Se limitarán los modelos de coches a siete: Córdoba (marca Seat),
+ * 		<li>Color. Se limitar\u00e1n los colores a tres: plata, rojo y azul.</li>
+ * 		<li>Modelo. Se limitar\u00e1n los modelos de coches a siete: C\u00f3rdoba (marca Seat),
  * 			Toledo (marca Seat),Ibiza (marca Seat), Serie 1 (marca BMW), Serie 2 (marca
  * 			BMW),Serie 3 (marca BMW) y Serie 5 (marca BMW). Para solicitar el modelo al
- * 			dar de alta al coche podrá implementarse un método pedirModelo que mediante
- * 			la gestión de un menú, devolverá el modelo indicado.</li>
- * 		<li>Matrícula (única por coche) El formato de las matrículas será el nuevo:
- * 			combinación de cuatro números (de 0000 a 9999) y tres letras, comenzando por
- * 			BBB y terminando por ZZZ, excluyendo vocales, la LL, la Ñ y la Q.
+ * 			dar de alta al coche podr\u00e1 implementarse un m\u00e1todo pedirModelo que mediante
+ * 			la gesti\u00f3n de un men\u00fa, devolver\u00e1 el modelo indicado.</li>
+ * 		<li>Matr\u00edcula (\u00fanica por coche) El formato de las matr\u00edculas ser\u00e1 el nuevo:
+ * 			combinaci\u00f3n de cuatro n\u00fameros (de 0000 a 9999) y tres letras, comenzando por
+ * 			BBB y terminando por ZZZ, excluyendo vocales, la LL, la \u00f1 y la Q.
  *			<ol>
- * 				<li>Matrículas válidas: 0000-BBB, 0000 BBB, 0000BBB, 1234ZZZ.</li>
- * 				<li>Matrículas inválidas: 000_BBB, 9999-BBQ, 0000-BÑB, 0000-DEF, 0000
+ * 				<li>Matr\u00edculas v\u00e1lidas: 0000-BBB, 0000 BBB, 0000BBB, 1234ZZZ.</li>
+ * 				<li>Matr\u00edculas inv\u00e1lidas: 000_BBB, 9999-BBQ, 0000-B\u00f1B, 0000-DEF, 0000
  * 				bbb,0000 AAA</li>
  * 			</ol>
  * 		</li>
  * </ol>
  * 
- * @author Guillermo Boquizo Sánchez
+ * @author Guillermo Boquizo S\u00e1nchez
  * @version 1.0
  *
  */
@@ -37,7 +37,7 @@ public class Coche implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * Campo para la matrícula.
+	 * Campo para la matr\u00edcula.
 	 */
 	private String matricula;
 	
@@ -52,18 +52,18 @@ public class Coche implements Serializable {
 	private Modelo modelo;
 	
 	/**
-	 * Campo constante para el patrón de matrícula.
+	 * Campo constante para el patr\u00f3n de matr\u00edcula.
 	 */
 	private static final Pattern patronMatricula = Pattern.compile("^\\d{4}[ -]?[[B-Zb-z]&&[^QEIOUqeiou]]{3}$");
 	
 	/**
-	 * Constructor de coche con color, modelo y matrícula como parámetro.
-	 * @param matricula la matrícula del coche.
+	 * Constructor de coche con color, modelo y matr\u00edcula como par\u00e1metro.
+	 * @param matricula la matr\u00edcula del coche.
 	 * @param color el color del coche.
 	 * @param modelo el modelo del coche.
-	 * @throws MatriculaNoValidaException en el caso de que la matrícula sea inválida.
-	 * @throws ColorNoValidoException en el caso de que el color sea inválido.
-	 * @throws ModeloNoValidoException en el caso de que el modelo sea inválido.
+	 * @throws MatriculaNoValidaException en el caso de que la matr\u00edcula sea inv\u00e1lida.
+	 * @throws ColorNoValidoException en el caso de que el color sea inv\u00e1lido.
+	 * @throws ModeloNoValidoException en el caso de que el modelo sea inv\u00e1lido.
 	 */
 	Coche(String matricula, Color color, Modelo modelo) throws MatriculaNoValidaException, ColorNoValidoException, ModeloNoValidoException {
 		setMatricula(matricula);
@@ -72,17 +72,17 @@ public class Coche implements Serializable {
 	}
 	
 	/**
-	 * Constructor sobrecargado con matrícula como parámetro.
-	 * @param matricula la matrícula del coche.
-	 * @throws MatriculaNoValidaException en el caso de que la matrícula sea inválida.
+	 * Constructor sobrecargado con matr\u00edcula como par\u00e1metro.
+	 * @param matricula la matr\u00edcula del coche.
+	 * @throws MatriculaNoValidaException en el caso de que la matr\u00edcula sea inv\u00e1lida.
 	 */
 	Coche(String matricula) throws MatriculaNoValidaException {
 		setMatricula(matricula);
 	}
 	
 	/**
-	 * Obtiene la matrícula.
-	 * @return matricula la matrícula obtenida.
+	 * Obtiene la matr\u00edcula.
+	 * @return matricula la matr\u00edcula obtenida.
 	 */
 	public String getMatricula() {
 		return matricula;
@@ -105,30 +105,30 @@ public class Coche implements Serializable {
 	}
 	
 	/**
-	 * Establece la matrícula. Lanza una excepción si la matrícula es inválida.
-	 * @param matricula la matrícula a establecer.
-	 * @throws MatriculaNoValidaException si la matrícula es inválida.
+	 * Establece la matr\u00edcula. Lanza una excepci\u00f3n si la matr\u00edcula es inv\u00e1lida.
+	 * @param matricula la matr\u00edcula a establecer.
+	 * @throws MatriculaNoValidaException si la matr\u00edcula es inv\u00e1lida.
 	 */
 	private void setMatricula(String matricula) throws MatriculaNoValidaException {
 		if (!esValida(matricula))
-			throw new MatriculaNoValidaException("\n\tLa matrícula no es válida.");
+			throw new MatriculaNoValidaException("\n\tLa matr\u00edcula no es v\u00e1lida.");
 		this.matricula = estandarizarMatricula(matricula);
 
 	}
 	
 	/**
-	 * Comprueba, mediante el patrón, si la matrícula es válida o no.
-	 * @param matricula la matrícula a comprobar.
-	 * @return true o false, en función de si cumple o no con el patrón.
+	 * Comprueba, mediante el patr\u00f3n, si la matr\u00edcula es v\u00e1lida o no.
+	 * @param matricula la matr\u00edcula a comprobar.
+	 * @return true o false, en funci\u00f3n de si cumple o no con el patr\u00f3n.
 	 */
 	static boolean esValida(String matricula) {
 		return patronMatricula.matcher(matricula).matches();
 	}
 	
 	/**
-	 * Permite estandarizar la matrícula eliminando guiones y espacios.
-	 * @param matricula la matrícula a estandarizar.
-	 * @return la matrícula estandarizada.
+	 * Permite estandarizar la matr\u00edcula eliminando guiones y espacios.
+	 * @param matricula la matr\u00edcula a estandarizar.
+	 * @return la matr\u00edcula estandarizada.
 	 */
 	private String estandarizarMatricula(String matricula) {
 		assert esValida(matricula);
@@ -136,24 +136,24 @@ public class Coche implements Serializable {
 	}
 	
 	/**
-	 * Establece el modelo. Lanza una excepción si el modelo es inválido.
+	 * Establece el modelo. Lanza una excepci\u00f3n si el modelo es inv\u00e1lido.
 	 * @param modelo el modelo a establecer.
-	 * @throws ModeloNoValidoException si el modelo es inválido.
+	 * @throws ModeloNoValidoException si el modelo es inv\u00e1lido.
 	 */
 	private void setModelo(Modelo modelo) throws ModeloNoValidoException {
 		if (modelo == null)
-			throw new ModeloNoValidoException("\n\tEl modelo no es válido.");
+			throw new ModeloNoValidoException("\n\tEl modelo no es v\u00e1lido.");
 		this.modelo = modelo;
 	}
 	
 	/**
-	 * Establece el color. Lanza una excepción si el color no es válido.
+	 * Establece el color. Lanza una excepci\u00f3n si el color no es v\u00e1lido.
 	 * @param color color a establecer.
-	 * @throws ColorNoValidoException si el color es inválido.
+	 * @throws ColorNoValidoException si el color es inv\u00e1lido.
 	 */
 	private void setColor(Color color) throws ColorNoValidoException {
 		if (color == null)
-			throw new ColorNoValidoException("\n\tEl color no es válido.");
+			throw new ColorNoValidoException("\n\tEl color no es v\u00e1lido.");
 		this.color = color;
 	}
 	

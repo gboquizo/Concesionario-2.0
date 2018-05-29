@@ -15,9 +15,9 @@ import concesionario.estructura.Gestion;
 import concesionario.estructura.MatriculaNoValidaException;
 
 /**
- * Clase que permite buscar por matrícula un coche.
+ * Clase que permite buscar por matr\u00edcula un coche.
  * 
- * @author Guillermo Boquizo Sánchez
+ * @author Guillermo Boquizo S\u00e1nchez
  * @version 1.0
  *
  */
@@ -38,8 +38,8 @@ public class BuscarPorMatricula extends CochesGUI {
 	}
 
 	/**
-	 * Método que comprueba que la matrícula sea válida, y muestra el coche por
-	 * índice, si existe en el concesionario.
+	 * Método que comprueba que la matr\u00edcula sea v\u00e1lida, y muestra el coche por
+	 * \u00edndice, si existe en el concesionario.
 	 */
 	private void comprobarMatricula() {
 		btnBuscar.addActionListener(new ActionListener() {
@@ -47,7 +47,7 @@ public class BuscarPorMatricula extends CochesGUI {
 				if (Gestion.concesionario.comprobarMatricula(textField_Matricula.getText()))
 					mostrarCoche(indice);
 				else
-					JOptionPane.showMessageDialog(null, "¡Matrícula no válida!", "Aceptar", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "\u00a1Matr\u00edcula no v\u00e1lida!", "Aceptar", JOptionPane.ERROR_MESSAGE);
 			}
 		});
 	}
@@ -67,12 +67,12 @@ public class BuscarPorMatricula extends CochesGUI {
 	 * Método que permite actualizar los textos de la ventana.
 	 */
 	private void actualizarTextos() {
-		setTitle("Buscar por matrícula");
+		setTitle("Buscar por matr\u00edcula");
 		btnCancel.setText("Cerrar");
 	}
 
 	/**
-	 * Método que permite comprobar el estado de habilitación/visibilidad de los
+	 * Método que permite comprobar el estado de habilitaci\u00f3n/visibilidad de los
 	 * botones de la ventana.
 	 */
 	private void comprobarBotones() {
@@ -87,7 +87,7 @@ public class BuscarPorMatricula extends CochesGUI {
 	}
 
 	/**
-	 * Método que permite mostrar un coche por el índice del mismo.
+	 * Método que permite mostrar un coche por el \u00edndice del mismo.
 	 * 
 	 * @param indiceCoche id del coche
 	 */
@@ -102,7 +102,7 @@ public class BuscarPorMatricula extends CochesGUI {
 			textField_Matricula.setForeground(java.awt.Color.RED);
 			e.printStackTrace();
 		} catch (CocheNoExisteException e) {
-			JOptionPane.showMessageDialog(null, "¡No existe ningun coche con esa matricula!", "Aceptar",
+			JOptionPane.showMessageDialog(null, "\u00a1No existe ningun coche con esa matricula!", "Aceptar",
 					JOptionPane.ERROR_MESSAGE);
 		}
 	}

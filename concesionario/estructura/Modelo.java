@@ -8,10 +8,10 @@ import concesionario.estructura.Modelo;
 /**
  * 
  *<p>Representa los modelos.</p> 
- *Según el enunciado del examen:
- *Se limitarán los modelos de coches a siete:
+ *Seg\u00fan el enunciado del examen:
+ *Se limitar\u00e1n los modelos de coches a siete:
  *	<ul>  
- * 		<li>Córdoba (marca Seat)</li>
+ * 		<li>C\u00f3rdoba (marca Seat)</li>
  *  	<li>Toledo (marca Seat)</li>
  *  	<li>Ibiza (marca Seat)</li>
  *  	<li>Serie 1 (marca BMW)</li> 
@@ -20,7 +20,7 @@ import concesionario.estructura.Modelo;
  *  	<li>Serie 5 (marca BMW)</li>
  *  </ul>
  *
- * @author Guillermo Boquizo Sánchez
+ * @author Guillermo Boquizo S\u00e1nchez
  * @version 1.0
  *
  */
@@ -64,9 +64,9 @@ public enum Modelo {
 	}
 		
 	/**
-	 * Genera las opciones del menú.
+	 * Genera las opciones del men\u00fa.
 	 * 
-	 * @return Opciones del menú.
+	 * @return Opciones del men\u00fa.
 	 */
 	public static String[] generarOpcionesMenu() {
 		String[] opcionesMenu = new String[values().length];

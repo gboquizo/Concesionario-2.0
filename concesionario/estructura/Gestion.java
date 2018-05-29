@@ -49,7 +49,7 @@ public class Gestion implements Serializable {
 	}
 	
 	/**
-	 * Permite establecer una representación del fichero.
+	 * Permite establecer una representaci\u00f3n del fichero.
 	 * @return file el fichero a establecer.
 	 */
 	public static File getFile() {
@@ -57,7 +57,7 @@ public class Gestion implements Serializable {
 	}
 	
 	/**
-	 * Permite establecer una representación del fichero.
+	 * Permite establecer una representaci\u00f3n del fichero.
 	 * @param file el fichero a establecer.
 	 */
 	public static void setFile(File file) {
@@ -65,8 +65,8 @@ public class Gestion implements Serializable {
 	}
 	
 	/**
-	 * Permite establecer una modificación en el concesionario.
-	 * @param modificado la modificación en el concesionario.
+	 * Permite establecer una modificaci\u00f3n en el concesionario.
+	 * @param modificado la modificaci\u00f3n en el concesionario.
 	 */
 	public static void setModificado(boolean modificado) {
 		Gestion.modificado = modificado;
@@ -74,7 +74,7 @@ public class Gestion implements Serializable {
 
 	/**
 	 * Permite comprobar si el concesionario ha sido modificado.
-	 * @return true o false, en función de si el concesionario ha sido o no modificado.
+	 * @return true o false, en funci\u00f3n de si el concesionario ha sido o no modificado.
 	 */
 	public static boolean isModificado() {
 		return modificado;

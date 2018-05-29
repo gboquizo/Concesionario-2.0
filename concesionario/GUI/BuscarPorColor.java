@@ -12,9 +12,9 @@ import concesionario.estructura.Color;
 import concesionario.estructura.Gestion;
 
 /**
- * Clase que permite la búsqueda por color.
+ * Clase que permite la b\u00fasqueda por color.
  * 
- * @author Guillermo Boquizo Sánchez.
+ * @author Guillermo Boquizo S\u00e1nchez.
  * @version 1.0
  *
  */
@@ -34,8 +34,8 @@ public class BuscarPorColor extends CochesGUI {
 		actualizarEventos();
 	}
 	/**
-	 * Método que permite seleccionar un color entre las opciones dadas en la enumeración
-	 * @return un color de la selección dada.
+	 * M\u00e9todo que permite seleccionar un color entre las opciones dadas en la enumeraci\u00f3n
+	 * @return un color de la selecci\u00f3n dada.
 	 */
 	private Color seleccionarColor() {
 		if (rdbtnRed.isSelected()) {
@@ -49,7 +49,7 @@ public class BuscarPorColor extends CochesGUI {
 		}
 	}
 	/**
-	 * Método que permite mostrar un coche.
+	 * M\u00e9todo que permite mostrar un coche.
 	 * 
 	 */
 	private void mostrarCoche() {
@@ -62,7 +62,7 @@ public class BuscarPorColor extends CochesGUI {
 	}
 
 	/**
-	 * Método que permite comprobar el estado de habilitación/inhabilitación de
+	 * M\u00e9todo que permite comprobar el estado de habilitaci\u00f3n/inhabilitaci\u00f3n de
 	 * los botones principales.
 	 */
 	private void comprobarBotones() {
@@ -75,7 +75,7 @@ public class BuscarPorColor extends CochesGUI {
 	}
 
 	/**
-	 * Método que comprueba el estado de habilitación/inhabilitación de los
+	 * M\u00e9todo que comprueba el estado de habilitaci\u00f3n/inhabilitaci\u00f3n de los
 	 * botones de desplazamiento.
 	 */
 	private void comprobarBtnDesplazamiento() {
@@ -94,7 +94,7 @@ public class BuscarPorColor extends CochesGUI {
 	}
 	
 	/**
-	 * Método que permite iterar hacia adelante .
+	 * M\u00e9todo que permite iterar hacia adelante .
 	 */
 	private void cocheAdelante() {
 		if (it.hasNext()) {
@@ -104,7 +104,7 @@ public class BuscarPorColor extends CochesGUI {
 	}
 
 	/**
-	 * Método que permite iterar hacia atrás.
+	 * M\u00e9todo que permite iterar hacia atr\u00e1s.
 	 */
 	private void cocheAtras() {
 		if (it.hasPrevious()) {
@@ -114,7 +114,7 @@ public class BuscarPorColor extends CochesGUI {
 	}
 
 	/**
-	 * Método que permite actualizar dimensiones y layout del panel.
+	 * M\u00e9todo que permite actualizar dimensiones y layout del panel.
 	 */
 	private void actualizarPane() {
 		setBounds(100, 100, 450, 300);
@@ -122,7 +122,7 @@ public class BuscarPorColor extends CochesGUI {
 	}
 
 	/**
-	 * Método que permite actualizar los textos de la ventana.
+	 * M\u00e9todo que permite actualizar los textos de la ventana.
 	 */
 	private void actualizarTextos() {
 		setTitle("Mostrar por color");
@@ -130,7 +130,7 @@ public class BuscarPorColor extends CochesGUI {
 	}
 
 	/**
-	 * Método que actualiza los eventos asociados a los botones principales de la ventana.
+	 * M\u00e9todo que actualiza los eventos asociados a los botones principales de la ventana.
 	 */
 	private void actualizarEventos() {
 		btnBuscar.addActionListener(new ActionListener() {
@@ -141,14 +141,14 @@ public class BuscarPorColor extends CochesGUI {
 					mostrarCoche();
 					btnIzda.setEnabled(false);
 				} catch (Exception ex) {
-					JOptionPane.showMessageDialog(null, "¡No hay coches del color seleccionado!", "Atención",
+					JOptionPane.showMessageDialog(null, "\u00a1No hay coches del color seleccionado!", "Atenci\u00f3n",
 							JOptionPane.ERROR_MESSAGE);
 				}
 			}
 		});
 
 		/**
-		 * Método que gestiona el comportamiento del botón derecho.
+		 * M\u00e9todo que gestiona el comportamiento del bot\u00f3n derecho.
 		 */
 		btnDcha.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -157,7 +157,7 @@ public class BuscarPorColor extends CochesGUI {
 		});
 
 		/**
-		 * Método que gestiona el comportamiento del botón izquierdo.
+		 * M\u00e9todo que gestiona el comportamiento del bot\u00f3n izquierdo.
 		 *
 		 */
 		btnIzda.addActionListener(new ActionListener() {

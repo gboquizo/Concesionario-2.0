@@ -31,7 +31,7 @@ import java.awt.event.FocusEvent;
 /**
  * Clase padre de todas las ventanas de tipo JDialog
  * 
- * @author Guillermo Boquizo Sánchez
+ * @author Guillermo Boquizo S\u00e1nchez
  * @version 1.0
  *
  */
@@ -69,8 +69,8 @@ public class CochesGUI extends JDialog {
 		contentPanel.setBackground(Color.WHITE);
 		contentPanel.setLayout(null);
 
-		JLabel lblMatricula = new JLabel("Matrícula");
-		lblMatricula.setToolTipText("Añade una matrícula");
+		JLabel lblMatricula = new JLabel("Matr\u00edcula");
+		lblMatricula.setToolTipText("A\u00f1ade una matr\u00edcula");
 		lblMatricula.setBounds(10, 11, 69, 14);
 		contentPanel.add(lblMatricula);
 
@@ -196,7 +196,7 @@ public class CochesGUI extends JDialog {
 	
 	
 	/**
-	 *Método encargado de gestionar el foco en el campo matrícula. 
+	 *M\u00e9todo encargado de gestionar el foco en el campo matr\u00edcula. 
 	 *
 	 */
 	private void controlDeFoco() {
@@ -217,8 +217,8 @@ public class CochesGUI extends JDialog {
 	}
 	
 	/**
-	 * Método que permite obtener un color de los dados en el enum Color 
-	 * en función de la selección en el radioButton.
+	 * M\u00e9todo que permite obtener un color de los dados en el enum Color 
+	 * en funci\u00f3n de la selecci\u00f3n en el radioButton.
 	 * 
 	 * @return color obtenido.
 	 */
@@ -235,8 +235,8 @@ public class CochesGUI extends JDialog {
 	}
 	
 	/**
-	 * Método que permite establecer el color seleccionado 
-	 * dentro de un rango de valores dados en una enumeración.
+	 * M\u00e9todo que permite establecer el color seleccionado 
+	 * dentro de un rango de valores dados en una enumeraci\u00f3n.
 	 * @param color color seleccionado.
 	 */
 	protected void seleccionarColor(concesionario.estructura.Color color) {

@@ -17,7 +17,7 @@ import javax.swing.JScrollPane;
 /**
  * Clase para la ventana GUI de ayuda.
  * 
- * @author Guillermo Boquizo Sánchez
+ * @author Guillermo Boquizo S\u00e1nchez
  * @version 1.0
  *
  */
@@ -49,16 +49,16 @@ public class Ayuda extends JDialog {
 			txtpnAyuda.setEditable(false);
 			txtpnAyuda.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
 			txtpnAyuda.setForeground(SystemColor.desktop);
-			txtpnAyuda.setToolTipText("Desarrollado por Guillermo Boquizo Sánchez");
+			txtpnAyuda.setToolTipText("Desarrollado por Guillermo Boquizo S\u00e1nchez");
 			txtpnAyuda.setBackground(Color.WHITE);
-			txtpnAyuda.setText("\r\nAyuda del Concesionario:\r\n\r\nMenú Coche:\r\n\t- "
+			txtpnAyuda.setText("\r\nAyuda del Concesionario:\r\n\r\nMen\u00fa Coche:\r\n\t- "
 				+ "Alta:  \r\n\t  Crea un nuevo coche.\r\n"
-				+ "\t Patrón de la matrícula: 7777-PPP, 7777PPP\r\n\r\n\t- "
-				+ "Baja:  \r\n\tElimina un coche dada su matrícula\r\n\r\n\t- "
+				+ "\t Patr\u00f3n de la matr\u00edcula: 7777-PPP, 7777PPP\r\n\r\n\t- "
+				+ "Baja:  \r\n\tElimina un coche dada su matr\u00edcula\r\n\r\n\t- "
 				+ "Mostrar concesionario:\r\n\tMuestra todos los coches del concesionario\r\n\r\n"
-				+ "Menú Buscar:\r\n\r"
-				+ "\n\t- Por matrícula:\r\n\t  "
-				+ "Busca un coche dada su matrícula\r\n\r"
+				+ "Men\u00fa Buscar:\r\n\r"
+				+ "\n\t- Por matr\u00edcula:\r\n\t  "
+				+ "Busca un coche dada su matr\u00edcula\r\n\r"
 				+ "\n\t- Por color:\r\n\t  Busca un coche por color");
 		}
 		

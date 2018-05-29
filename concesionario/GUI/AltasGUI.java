@@ -23,7 +23,7 @@ import java.awt.event.ActionEvent;
 /**
  * Clase que gestiona la GUI de altas del concesionario.
  * 
- * @author Guillermo Boquizo Sánchez.
+ * @author Guillermo Boquizo S\u00e1nchez.
  * @version 1.0
  *
  */
@@ -45,7 +45,7 @@ public class AltasGUI extends CochesGUI {
 		getContentPane().setLayout(new BorderLayout());
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		btnCancel.setText("Cerrar");
-		btnBuscar.setText("Añadir");
+		btnBuscar.setText("A\u00f1adir");
 		btnIzda.setVisible(false);
 		btnDcha.setVisible(false);
 		btnOK.setVisible(false);
@@ -57,7 +57,7 @@ public class AltasGUI extends CochesGUI {
 
 	
 	/**
-	 * Método que permite seleccionar el color, sobrescrito de la ventana padre CochesGUI.
+	 * M\u00e9todo que permite seleccionar el color, sobrescrito de la ventana padre CochesGUI.
 	 */
 	@Override
 	protected Color getSelectedColor() {
@@ -65,7 +65,7 @@ public class AltasGUI extends CochesGUI {
 	}
 
 	/**
-	 * Método encargado de gestionar el comportamiento de los eventos vinculados al botón que añade al concesionario.
+	 * M\u00e9todo encargado de gestionar el comportamiento de los eventos vinculados al bot\u00f3n que a\u00f1ade al concesionario.
 	 */
 	private void annadir() {
 		btnBuscar.addActionListener(new ActionListener() {
@@ -76,7 +76,7 @@ public class AltasGUI extends CochesGUI {
 					limpiar();
 					Gestion.setModificado(true);
 				} catch (ColorNoValidoException | ModeloNoValidoException | MatriculaNoValidaException | CocheYaExisteException e) {
-					JOptionPane.showMessageDialog(contentPanel, e.getMessage(), "¡¡ERROR!!", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(contentPanel, e.getMessage(), "\u00a1ERROR!!", JOptionPane.ERROR_MESSAGE);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
